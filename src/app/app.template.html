@@ -1,0 +1,28 @@
+<div [@splashAnimate]="splashScreen ? true : false" class="splashscreen" fxLayout="column" fxFlex>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>
+<div fxLayout="column" fxFlex>
+    <mat-sidenav-container fxFlex fullscreen (backdropClick)="closeSidenav()" [class.sidenav-container-mobile]="mobileQuery.matches">
+        <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" [opened]="keepMenuOpen(mobileQuery.matches)"
+            (keydown.escape)="closeSidenav()" [disableClose]="!mobileQuery.matches" *ngIf="loggedIn">
+            <mat-nav-list>
+                <!-- Add screen navigation elements here -->
+                <h3 matSubheader>Navigate</h3>
+                <a mat-list-item routerLink="/home" (click)="closeSidenav()">
+                    <mat-icon mat-list-icon>home</mat-icon>
+                    <h4 mat-line>Home</h4>
+                </a>
+                <!-- End -->
+                <mat-divider></mat-divider>
+                <h3 matSubheader>Account</h3>
+                <a mat-list-item (click)="logout()">
+                    <mat-icon mat-list-icon>exit_to_app</mat-icon>
+                    <h4 mat-line>Log Out</h4>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <router-outlet></router-outlet>
+    </mat-sidenav-container>
+</div>

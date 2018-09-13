@@ -1,0 +1,43 @@
+<div fxLayoutAlign="center center" style="height: 100vh;width:100vw;">
+    <mat-card fxLayout="column" fxLayoutAlign="center center" [fxShow.xs]="false" [fxShow]="true">
+        <mat-card-title>Sign up</mat-card-title>
+        <form [formGroup]="signUpForm">
+            <mat-card-content>
+                <p>
+                    <mat-input-container>
+                        <input type="text" matInput placeholder="Full Name" formControlName="fullName">
+                    </mat-input-container>
+                </p>
+
+                <p>
+                    <mat-input-container>
+                        <input type="text" matInput placeholder="Address" formControlName="address">
+                    </mat-input-container>
+                </p>
+            </mat-card-content>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <button mat-raised-button (click)="signUp()" [disabled]="signUpForm.invalid || pending" class="signup-button" color="primary">CREATE ACCOUNT</button>
+            </div>
+        </form>
+    </mat-card>
+
+    <div fxLayout="column" [fxShow.xs]="true" [fxShow]="false" fxLayoutAlign="center center">
+        <h1 class="mat-h1">Sign up</h1>
+        <form [formGroup]="signUpForm">
+            <p>
+                <mat-input-container>
+                    <input type="text" matInput placeholder="Full Name" formControlName="fullName">
+                </mat-input-container>
+            </p>
+
+            <p>
+                <mat-input-container>
+                    <input type="text" matInput placeholder="Address" formControlName="address">
+                </mat-input-container>
+            </p>
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <button mat-raised-button (click)="signUp()" [disabled]="signUpForm.invalid || pending" class="signup-button" color="primary">CREATE ACCOUNT</button>
+            </div>
+        </form>
+    </div>
+</div>

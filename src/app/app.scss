@@ -1,0 +1,35 @@
+.splashscreen {
+    width:100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 10000;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -moz-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition-delay: 3s;
+    -moz-transition-delay: 3s;
+    -o-transition-delay: 3s;
+    -ms-transition-delay: 3s;
+    transition-delay: 3s;
+}
+
+:host {
+    display: flex;
+    flex: 1;
+}
+
+mat-sidenav-container {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.sidenav-container-mobile {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+* /deep/ * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

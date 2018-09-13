@@ -1,0 +1,47 @@
+<div fxLayoutAlign="center center" style="height: 100vh;width:100vw;">
+  <mat-card fxLayout="column" fxLayoutAlign="center center" [fxShow.xs]="false" [fxShow]="true">
+    <mat-card-title>{{appName}}</mat-card-title>
+    <form [formGroup]="loginForm">
+      <mat-card-content>
+        <p>
+          <mat-input-container>
+            <input type="text" matInput placeholder="Username" formControlName="username">
+          </mat-input-container>
+        </p>
+
+        <p>
+          <mat-input-container>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+          </mat-input-container>
+        </p>
+      </mat-card-content>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-raised-button (click)="login()" [disabled]="loginForm.invalid || pending" class="login-button" color="primary">LOGIN</button>
+        <h4 *ngIf="isExternalApp" class="orText mat-h4" fxFlexOffset="20px" fxFlexAlign="center">OR</h4>
+        <button *ngIf="isExternalApp" mat-raised-button (click)="googleSignIn()" [disabled]="pending" color="warn">Log in with Google</button>
+      </div>
+    </form>
+  </mat-card>
+
+  <div fxLayout="column" [fxShow.xs]="true" [fxShow]="false" fxLayoutAlign="center center">
+    <h1 class="mat-h1">{{appName}}</h1>
+    <form [formGroup]="loginForm">
+      <p>
+        <mat-input-container>
+          <input type="text" matInput placeholder="Username" formControlName="username">
+        </mat-input-container>
+      </p>
+
+      <p>
+        <mat-input-container>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-input-container>
+      </p>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <button mat-raised-button (click)="login()" [disabled]="loginForm.invalid || pending" class="login-button" color="primary">LOGIN</button>
+      <h4 *ngIf="isExternalApp" class="orText mat-h4" fxFlexOffset="20px" fxFlexAlign="center">OR</h4>
+      <button *ngIf="isExternalApp" mat-raised-button (click)="googleSignIn()" [disabled]="pending" color="warn">Log in with Google</button>
+    </div>
+  </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+html, body{
+  overflow: hidden;
+}
+
+.orText {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  padding: 0 8px;
+  z-index: 9999;
+  width: 40px;
+}
+
+.orText::before {
+  content: "";
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 12px;
+  border-top: 1px solid rgba(0,0,0,.12);
+  box-sizing: border-box;
+  right: 100%;
+}
+
+.orText::after {
+  content: "";
+  display: block;
+  width: 30px;
+  position: absolute;
+  top: 12px;
+  border-top: 1px solid rgba(0,0,0,.12);
+  box-sizing: border-box;
+  left: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+.login-button {
+  width: 200px;
+}
+

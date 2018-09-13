@@ -1,0 +1,17 @@
+<div fxLayoutAlign="center center" style="height: 100vh;width:100vw;">
+    <mat-card fxLayout="column" [fxShow.xs]="false" [fxShow]="true" fxLayoutAlign="center center">
+        <mat-card-title>Account status</mat-card-title>
+        <mat-card-content>
+            <p>Pending Message</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/">OK</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    <div fxLayout="column" [fxShow.xs]="true" [fxShow]="false" fxLayoutAlign="center center">
+        <h1 class="mat-h1">Account status</h1>
+        <p class="mat-body-1">Pending message</p>
+        <button mat-raised-button color="primary" routerLink="/">OK</button>
+    </div>
+    </div>

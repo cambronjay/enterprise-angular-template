@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <button [fxShow.xs]="true" [fxShow]="false" mat-icon-button (click)="openSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Home</span>
+</mat-toolbar>
+<div class="content" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="16px" [@routeAnimation]="true">
+    <!-- Add screen content here -->
+    <mat-card>
+        <mat-card-title>Example card title</mat-card-title>
+        <mat-card-content>
+            <p>Card content</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/">Card button</button>
+        </mat-card-actions>
+    </mat-card>
+    <!-- End -->
+</div>

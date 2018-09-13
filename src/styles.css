@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "https://fonts.googleapis.com/css?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  padding: 16px;
+}
+
+.mat-progress-spinner {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+
+.mat-progress-spinner svg {
+  width: 30px !important;
+  height: 30px !important;
+}

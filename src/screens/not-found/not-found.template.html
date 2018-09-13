@@ -1,0 +1,17 @@
+<div fxLayoutAlign="center center" style="height: 100vh;width:100vw;">
+<mat-card fxLayout="column" [fxShow.xs]="false" [fxShow]="true" fxLayoutAlign="center center">
+    <mat-card-title>404: Not Found</mat-card-title>
+    <mat-card-content>
+        <p>Hey! It looks like this page doesn't exist.</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/">OK</button>
+    </mat-card-actions>
+</mat-card>
+
+<div fxLayout="column" [fxShow.xs]="true" [fxShow]="false" fxLayoutAlign="center center">
+    <h1 class="mat-h1">404: Not Found</h1>
+    <p class="mat-body-1">Hey! It looks like this page doesn't exist.</p>
+    <button mat-raised-button color="primary" routerLink="/">OK</button>
+</div>
+</div>
